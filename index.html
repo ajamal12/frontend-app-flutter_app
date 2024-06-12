@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head>
+  <meta charset="UTF-8">
+  <title>91LMS</title>
+  <script src="flutter.js" defer=""></script>
+   <!-- START: image_cropper web support -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+  <!-- END: image_cropper web support -->
+  <!-- START: WebView web support -->
+  <script type="application/javascript" src="/assets/packages/flutter_inappwebview/assets/web/web_support.js" defer=""></script>
+  <!-- END: WebView web support -->
+  <!-- START: Google signIn clientId  -->
+  <meta name="google-signin-client_id" content="373247656580-qnvobken66052nj9bik6nbalt78t1bvt.apps.googleusercontent.com">
+  <!-- END: Google signIn clientId -->
+  <link rel="stylesheet" type="text/css" href="splash/style.css">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <script src="splash/splash.js"></script>
+</head>
+
+<body>  <picture id="splash">
+      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
+      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
+  </picture>    
+  <script>
+  if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/firebase-messaging-sw.js");
+      });
+    }
+  </script>
+
+<!-- This script installs pdf.min.js to render the PDF page as an image in the
+application and load in syncfusion_flutter_pdfviewer widget -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+<script type="text/javascript">
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+
+
+</body></html>
